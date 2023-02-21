@@ -1,0 +1,28 @@
+{
+    "client" : {
+        "url" : "http://localhost:8000/agent_st.php",
+        "skip_ssl": false,
+        "method" : "POST",
+        "headers" : {
+            "Host" : "localhost:8000",
+            "User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
+        },
+        "cookies" : {},
+        "fields" : {},
+        "message" : {
+            "secret" : {
+                "type" : "COOKIE",
+                "key" : "X-Authorization",
+                "value" : "P4ssw0rd!"
+            },
+            "data" : {
+                "type" : "FIELD",
+                "key" : "data"
+            }
+        }
+    },
+    "server" : {
+        "type" : "FIELD",
+        "key" : "data"
+    }
+}
