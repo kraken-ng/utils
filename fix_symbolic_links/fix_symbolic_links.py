@@ -19,6 +19,9 @@ if __name__ == "__main__":
         if not os.path.isdir(command_folder):
             continue
 
+        if command_folder.name == "__pycache__":
+            continue
+
         print(f"[+] Enter in folder: '{command_folder.name}'")
         
         command_files = os.listdir(command_folder)

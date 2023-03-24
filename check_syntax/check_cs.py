@@ -117,9 +117,11 @@ class Checker(object):
                         print(f"[+] Module: '{source_name}' for version '{compiler_version}' executed successfully")
                     else:
                         print(f"[!] Module: '{source_name}' for version '{compiler_version}' has runtime errors")
-                        print(f"{proc.stderr}")             
+                        print(f"{proc.stdout}")
+                        print(f"{proc.stderr}")
                 else:
                     print(f"[!] Module: '{source_name}' for version '{compiler_version}' has compiled errors")
+                    print(f"{proc.stdout}")
                     print(f"{proc.stderr}")
         return
 
