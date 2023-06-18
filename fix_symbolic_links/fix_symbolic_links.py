@@ -26,6 +26,9 @@ if __name__ == "__main__":
         
         command_files = os.listdir(command_folder)
         for command_file in command_files:
+            if command_file.endswith(".dll") or command_file.endswith(".exe"):
+                continue 
+
             command_file_path = os.path.join(command_folder,command_file)
             command_file_lines = read_file_lines(command_file_path)
             if len(command_file_lines) != 1:
